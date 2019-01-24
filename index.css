@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,800');
+
+
+
+/*
+================================
+= General
+================================
+*/
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #343a40;
+}
+
+html {
+    font: 16px/1 "Montserrat", sans-serif;
+        font-weight: normal;
+        font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/*
+================================
+= Portfolio-heading
+================================
+*/
+
+.portfolio-wrapper{
+    display:flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.portfolio-heading {
+    /* text-align: center; */
+    /* background: red; */
+}
+
+.portfolio-heading h1 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+
+.portfolio-intro {
+    /* margin-top: 0.5em; */
+    margin-bottom: 2em;
+    color: #686f77;
+    line-height: 1.25;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.portfolio-intro--and{
+    opacity: 0.5;
+}
+
+
+.portfolio-social, .portfolio-section-links ul {
+    margin: 0;
+    margin-top: 0px;
+    padding: 0;
+    list-style: none;
+}
+
+.portfolio-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.portfolio-social a {
+    color: #343a40;
+}
+
+.portfolio-social a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+}
+
+a {
+    color: #c2255c;
+    text-decoration: none;
+}
+
+
+.portfolio-social li:not(:last-child)::after {
+    height: 40px;
+    background-color: #dee2e6;
+}
+
+.footer-social li:not(:last-child)::after, .portfolio-social li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    -webkit-transform: translate(50%, -50%) rotate(25deg);
+    transform: translate(50%, -50%) rotate(25deg);
+    width: 2px;
+    height: 100%;
+    background-color: #dee2e6;
+}
+
+.footer-social li:not(:last-child), .portfolio-social li:not(:last-child) {
+    padding-right: 5px;
+}
+
+.footer-social li:not(:first-child), .portfolio-social li:not(:first-child) {
+    padding-left: 5px;
+}
+
+.portfolio-social li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 110px;
+    flex: 0 1 110px;
+    font-size: 1.5rem;
+}
+
+.portfolio-social li {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+    text-align: center;
+}
+
+/*
+================================
+= Simple Animations
+================================
+*/
+
+
+.fa-twitter,
+.fa-github,
+.fa-medium,
+.fa-gitlab,
+.fa-envelope,
+.fa-linkedin{
+    opacity: 0.5;
+    transition: all 0.5s ease-out;
+    transform: translateY(0);
+}
+
+.fa-file{
+    color: #353238;
+}
+
+.fa-twitter:hover,
+.fa-github:hover,
+.fa-medium:hover,
+.fa-gitlab:hover,
+.fa-envelope:hover,
+.fa-linkedin:hover{
+    opacity: 1;
+    transform: translateY(-10px);
+}
+
+.fa-twitter:hover{
+    color: #009CF9;
+}
+.fa-github:hover{
+    color: #000;
+}
+.fa-gitlab:hover{
+    color: #F32B00;
+}
+.fa-medium:hover{
+    color: #38A700;
+}
+.fa-linkedin:hover{
+    color: #0074BB;
+}
+.fa-envelope:hover{
+    color: #0C090D;
+}
+
+/*
+================================
+= Media query
+================================
+*/
+
+@media only screen and (max-width: 700px){
+    html{
+        font-size: 12px;
+    }
+    .portfolio-wrapper{
+        padding-top: 200px;
+    }
+}
+
+@media only screen and (max-width: 520px){
+    html{
+        font-size: 9px;
+    }
+    .portfolio-wrapper{
+        align-items: center;
+        padding-top: 0;
+    }
+}
